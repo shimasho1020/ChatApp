@@ -228,22 +228,22 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="93" id="odL-ri-IAQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="93" id="odL-ri-IAQ">
                                         <rect key="frame" x="0.0" y="50" width="393" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="odL-ri-IAQ" id="AUE-5b-CVG">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casual" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-LH-Jje">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casual" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-LH-Jje">
                                                     <rect key="frame" x="8" y="11.666666666666664" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="5SF-ru-kQI"/>
                                                         <constraint firstAttribute="width" constant="70" id="bH6-uP-tME"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIm-61-J0G">
-                                                    <rect key="frame" x="86" y="32" width="17" height="29"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIm-61-J0G">
+                                                    <rect key="frame" x="94" y="32" width="17" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -253,11 +253,15 @@
                                                 <constraint firstItem="I4z-LH-Jje" firstAttribute="leading" secondItem="AUE-5b-CVG" secondAttribute="leading" constant="8" id="AmD-b0-Tte"/>
                                                 <constraint firstItem="I4z-LH-Jje" firstAttribute="centerY" secondItem="AUE-5b-CVG" secondAttribute="centerY" id="KcK-lM-DRK"/>
                                                 <constraint firstItem="LIm-61-J0G" firstAttribute="centerY" secondItem="AUE-5b-CVG" secondAttribute="centerY" id="i0P-FA-BCS"/>
-                                                <constraint firstItem="LIm-61-J0G" firstAttribute="leading" secondItem="I4z-LH-Jje" secondAttribute="trailing" constant="8" id="wQa-Mm-Pgt"/>
+                                                <constraint firstItem="LIm-61-J0G" firstAttribute="leading" secondItem="I4z-LH-Jje" secondAttribute="trailing" constant="16" id="wQa-Mm-Pgt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Mif-MS-IOW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="geV-ww-2H0"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -283,6 +287,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="nYE-fw-vpq" id="QFi-aJ-KXB"/>
                         <segue destination="5wg-cf-e4f" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="GsT-rk-YOA"/>
                     </connections>
                 </viewController>
