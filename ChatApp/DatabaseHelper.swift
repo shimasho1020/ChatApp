@@ -5,6 +5,7 @@
 //  Created by 島田将太郎 on 2023/01/01.
 //
 
+import UIKit
 import Foundation
 import Firebase
 //import SDWebImage
@@ -67,17 +68,17 @@ class DatabaseHelper {
         })
     }
 
-//    func resisterUserInfo(name:String,image:UIImage){
-//        db.collection("user").document(uid).setData(["name":name])
-//        let resized = image.resize(toWidth: 300)
-//        guard let imageData = resized!.jpegData(compressionQuality:1) else { return }
-//        storage.child("image/\(uid).jpeg").putData(imageData, metadata: nil)
-//    }
-//
-//    func getImage(userID:String,imageView:UIImageView){
-//        let imageRef = storage.child("image/"+userID+".jpeg")
-////        imageView.sd_setImage(with: imageRef)
-//    }
+    func resisterUserInfo(name:String,image:UIImage){
+        db.collection("user").document(uid).setData(["name":name])
+        let resized = image.resize(toWidth: 300)
+        guard let imageData = resized!.jpegData(compressionQuality:1) else { return }
+        storage.child("image/\(uid).jpeg").putData(imageData, metadata: nil)
+    }
+
+    func getImage(userID:String,imageView:UIImageView){
+        let imageRef = storage.child("image/"+userID+".jpeg")
+//        imageView.sd_setImage(with: imageRef)
+    }
     
 }
 

@@ -48,7 +48,7 @@ class CreatAccountView: UIViewController,UIImagePickerControllerDelegate, UINavi
         AuthHelper().createAccount(email: emailField.text!, password: passwordField.text!, result: {
             success in
             if success {
-//                DatabaseHelper(uid: AuthHelper().uid()).resisterUserInfo(name: self.nameField.text!, image: self.imageView.image!)
+                DatabaseHelper().resisterUserInfo(name: self.nameField.text!, image: self.imageView.image!)
                 self.dismiss(animated: true, completion: nil)
             } else {
                 self.showError(message: "有効なメールアドレス、6文字以上のパスワードを設定してください。")

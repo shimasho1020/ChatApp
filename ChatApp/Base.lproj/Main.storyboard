@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5wg-cf-e4f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bNK-9d-WAt">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -147,7 +147,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-1U-Jor">
-                                <rect key="frame" x="146" y="623" width="120" height="60"/>
+                                <rect key="frame" x="136.66666666666666" y="623" width="119.99999999999997" height="60"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="s7z-Fh-moI"/>
@@ -161,7 +161,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnM-qs-eNu">
-                                <rect key="frame" x="106.66666666666669" y="715" width="180" height="35"/>
+                                <rect key="frame" x="116" y="715" width="180" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="ログイン画面に戻る"/>
                                 <connections>
@@ -271,13 +271,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="チャット" id="BBG-YE-R0k">
-                        <barButtonItem key="leftBarButtonItem" title="ログアウト" id="qDk-Sg-wU1"/>
+                        <barButtonItem key="leftBarButtonItem" title="ログアウト" id="qDk-Sg-wU1">
+                            <connections>
+                                <action selector="onLogOut:" destination="BYZ-38-t0r" id="zWG-QE-w6p"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="OoY-kt-YIq">
                             <connections>
                                 <segue destination="ezJ-4c-8kR" kind="show" id="ko9-Mk-bgl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="5wg-cf-e4f" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="GsT-rk-YOA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
