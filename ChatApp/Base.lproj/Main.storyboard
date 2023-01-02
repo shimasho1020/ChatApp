@@ -161,7 +161,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnM-qs-eNu">
-                                <rect key="frame" x="116" y="715" width="180" height="35"/>
+                                <rect key="frame" x="106.66666666666669" y="715" width="180" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="ログイン画面に戻る"/>
                                 <connections>
@@ -322,10 +322,13 @@
                                                         <constraint firstAttribute="height" constant="40" id="opf-VV-AZi"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-NV-ZP1" customClass="InsetLabel" customModule="ChatApp" customModuleProvider="target">
-                                                    <rect key="frame" x="56" y="25.666666666666671" width="87" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-NV-ZP1" customClass="InsetLabel" customModule="ChatApp" customModuleProvider="target">
+                                                    <rect key="frame" x="56.000000000000007" y="26" width="86.666666666666686" height="20.333333333333329"/>
                                                     <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                     <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="qS8-tZ-ThR"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -353,10 +356,13 @@
                                                         <constraint firstAttribute="height" constant="40" id="Rtm-Sj-ykO"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5Q-1L-Ic8" customClass="InsetLabel" customModule="ChatApp" customModuleProvider="target">
-                                                    <rect key="frame" x="246" y="21" width="87" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5Q-1L-Ic8" customClass="InsetLabel" customModule="ChatApp" customModuleProvider="target">
+                                                    <rect key="frame" x="246.33333333333334" y="21" width="86.666666666666657" height="21"/>
                                                     <color key="backgroundColor" name="AccentColor"/>
                                                     <color key="tintColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="C6f-88-QaT"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>

@@ -95,13 +95,27 @@ class ChatView: UIViewController,UITableViewDelegate,UITableViewDataSource, Inpu
         database.getImage(userID: data.userID, imageView: imageView)
         let label = cell.viewWithTag(1) as! UILabel
         label.text = data.text
-        label.layer.cornerRadius = label.frame.size.height * 0.5
+        label.numberOfLines = 0
+        label.sizeToFit()
+        label.layer.cornerRadius = 20
         label.clipsToBounds = true
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70.0
+        let data = chatData[indexPath.row]
+        let cell:UITableViewCell
+        if data.userID == AuthHelper().uid() {
+            cell = tableView.dequeueReusableCell(withIdentifier: "cell2")!
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: "cell1")!
+        }
+        let label = cell.viewWithTag(1) as! UILabel
+        label.text = data.text
+        label.numberOfLines = 0
+        label.sizeToFit()
+        print(label.frame.size.height)
+        return max(label.frame.size.height - 20, 60);
     }
 
 }
