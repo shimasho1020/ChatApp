@@ -84,9 +84,34 @@ class DatabaseHelper {
         db.collection("room").addDocument(data: ["user":[userID,uid]])
     }
     
+    func sendChatMessage(roomID:String,text:String){
+        db.collection("room").document(roomID).collection("chat").addDocument(data: ["userID":uid,"text":text,"time":time(nil)])
+    }
+    
+    func chatDataListener(roomID:String,result:@escaping([ChatText]) -> Void){
+        db.collection("room").document(roomID).collection("chat").order(by: "time").addSnapshotListener({
+            (querySnapshot, error) in
+            if error == nil{
+                var chatList:[ChatText] = []
+                for doc in querySnapshot!.documents{
+                    let data = doc.data()
+                    guard let text = data["text"] as! String? else { break }
+                    guard let userID = data["userID"] as! String? else { break }
+                    chatList.append(ChatText(text: text, userID: userID))
+                }
+                result(chatList)
+            }
+        })
+    }
+
 }
 
 struct ChatRoom {
     let roomID:String
+    let userID:String
+}
+
+struct ChatText {
+    let text:String
     let userID:String
 }

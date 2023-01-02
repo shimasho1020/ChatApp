@@ -59,5 +59,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "chat", sender: roomList[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "chat" {
+            let VC = segue.destination as! ChatView
+            let data = sender as! ChatRoom
+            VC.roomData = data
+        }
+    }
+    
 }
 
