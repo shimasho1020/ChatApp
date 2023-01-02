@@ -18,10 +18,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         let uid = AuthHelper().uid()
+        print("USER_ID: "+uid)
         if uid == "" {
             performSegue(withIdentifier: "login", sender: nil)
         } else {
-            print("USER_ID: "+uid)
             dataHelper = DatabaseHelper()
             dataHelper.getMyRoomList(result: {
                 result in
@@ -33,7 +33,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBAction func onLogOut(_ sender: Any) {
         AuthHelper().signout()
-        performSegue(withIdentifier: "login", sender: nil)
+        viewDidLoad()
+//        performSegue(withIdentifier: "login", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

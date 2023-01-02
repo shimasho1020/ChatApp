@@ -114,7 +114,6 @@ class ChatView: UIViewController,UITableViewDelegate,UITableViewDataSource, Inpu
         label.text = data.text
         label.numberOfLines = 0
         label.sizeToFit()
-        print(label.frame.size.height)
         return max(label.frame.size.height - 20, 60);
     }
 

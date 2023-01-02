@@ -147,7 +147,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-1U-Jor">
-                                <rect key="frame" x="136.66666666666666" y="623" width="119.99999999999997" height="60"/>
+                                <rect key="frame" x="146" y="623" width="120" height="60"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="s7z-Fh-moI"/>
@@ -161,7 +161,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnM-qs-eNu">
-                                <rect key="frame" x="106.66666666666669" y="715" width="180" height="35"/>
+                                <rect key="frame" x="116" y="715" width="180" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="ログイン画面に戻る"/>
                                 <connections>
@@ -235,8 +235,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casual" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-LH-Jje">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-LH-Jje">
                                                     <rect key="frame" x="8" y="11.666666666666664" width="70" height="70"/>
+                                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="5SF-ru-kQI"/>
                                                         <constraint firstAttribute="width" constant="70" id="bH6-uP-tME"/>
@@ -315,8 +316,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casual" translatesAutoresizingMaskIntoConstraints="NO" id="mCm-U1-CGh">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mCm-U1-CGh">
                                                     <rect key="frame" x="8" y="16" width="40" height="40"/>
+                                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="gqn-Rw-b3n"/>
                                                         <constraint firstAttribute="height" constant="40" id="opf-VV-AZi"/>
@@ -349,8 +351,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casual" translatesAutoresizingMaskIntoConstraints="NO" id="bJn-Ko-CvV">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJn-Ko-CvV">
                                                     <rect key="frame" x="341" y="11.666666666666664" width="40" height="40"/>
+                                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="Eqb-HR-JVX"/>
                                                         <constraint firstAttribute="height" constant="40" id="Rtm-Sj-ykO"/>
@@ -538,7 +541,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casual" translatesAutoresizingMaskIntoConstraints="NO" id="9iD-yB-Kxh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9iD-yB-Kxh">
                                 <rect key="frame" x="76.666666666666686" y="99" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="OP8-pR-RHd"/>
