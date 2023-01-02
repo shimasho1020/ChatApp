@@ -20,9 +20,9 @@ class DatabaseHelper {
     let storage = Storage.storage().reference()
     
     func getMyRoomList(result:@escaping([ChatRoom]) -> Void){
-        var roomList:[ChatRoom] = []
         db.collection("room").whereField("user", arrayContains: uid).addSnapshotListener({
             (querySnapshot, error) in
+            var roomList:[ChatRoom] = []
             if error == nil {
                 for doc in querySnapshot!.documents {
                     let data = doc.data()
@@ -46,7 +46,7 @@ class DatabaseHelper {
             (querySnapshot, error) in
             if error == nil {
                 let data = querySnapshot?.data()
-                guard let name = data!["name"] as! String? else {
+                guard let name = data?["name"] as! String? else {
                     result("")
                     return
                 }
@@ -78,6 +78,10 @@ class DatabaseHelper {
     func getImage(userID:String,imageView:UIImageView){
         let imageRef = storage.child("image/"+userID+".jpeg")
 //        imageView.sd_setImage(with: imageRef)
+    }
+    
+    func createRoom(userID:String){
+        db.collection("room").addDocument(data: ["user":[userID,uid]])
     }
     
 }

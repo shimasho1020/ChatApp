@@ -17,13 +17,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         let uid = AuthHelper().uid()
         if uid == "" {
             performSegue(withIdentifier: "login", sender: nil)
         } else {
             print("USER_ID: "+uid)
-            //チャットリストを表示する処理
             dataHelper = DatabaseHelper()
             dataHelper.getMyRoomList(result: {
                 result in

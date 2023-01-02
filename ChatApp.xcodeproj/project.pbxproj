@@ -26,6 +26,8 @@
 		215A43D429613C5C001C4C68 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A43D329613C5C001C4C68 /* LoginView.swift */; };
 		215A43D629614C8F001C4C68 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A43D529614C8F001C4C68 /* DatabaseHelper.swift */; };
 		215A43D829615A85001C4C68 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A43D729615A85001C4C68 /* CustomView.swift */; };
+		219D903B2961DE2F00EAF5D7 /* addFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D903A2961DE2F00EAF5D7 /* addFriendView.swift */; };
+		219D903D2961F88000EAF5D7 /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D903C2961F88000EAF5D7 /* QRScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		215A43D529614C8F001C4C68 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		215A43D729615A85001C4C68 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		219D903929616E4500EAF5D7 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ChatApp.app; path = "/Users/shimadasusumutarou/Documents/ChatApp/build/Debug-iphoneos/ChatApp.app"; sourceTree = "<absolute>"; };
+		219D903A2961DE2F00EAF5D7 /* addFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFriendView.swift; sourceTree = "<group>"; };
+		219D903C2961F88000EAF5D7 /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				215A43D329613C5C001C4C68 /* LoginView.swift */,
 				215A43D529614C8F001C4C68 /* DatabaseHelper.swift */,
 				215A43D729615A85001C4C68 /* CustomView.swift */,
+				219D903A2961DE2F00EAF5D7 /* addFriendView.swift */,
+				219D903C2961F88000EAF5D7 /* QRScanner.swift */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -179,9 +185,11 @@
 				215A43AF296009D1001C4C68 /* ViewController.swift in Sources */,
 				215A43D029601C4C001C4C68 /* AuthHelper.swift in Sources */,
 				215A43D629614C8F001C4C68 /* DatabaseHelper.swift in Sources */,
+				219D903B2961DE2F00EAF5D7 /* addFriendView.swift in Sources */,
 				215A43AB296009D1001C4C68 /* AppDelegate.swift in Sources */,
 				215A43D229603291001C4C68 /* CreatAccountView.swift in Sources */,
 				215A43AD296009D1001C4C68 /* SceneDelegate.swift in Sources */,
+				219D903D2961F88000EAF5D7 /* QRScanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
