@@ -30,6 +30,7 @@
 		219D903D2961F88000EAF5D7 /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D903C2961F88000EAF5D7 /* QRScanner.swift */; };
 		219D903F2962A86B00EAF5D7 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D903E2962A86B00EAF5D7 /* ChatView.swift */; };
 		219D90412962B40900EAF5D7 /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219D90402962B40900EAF5D7 /* InputView.xib */; };
+		21D0222429640E81009592D9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D0222329640E81009592D9 /* ProfileView.swift */; };
 		EFCF40664113B55D553131F4 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8350541C48F66AD4F15261D4 /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,11 +48,12 @@
 		215A43D329613C5C001C4C68 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		215A43D529614C8F001C4C68 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		215A43D729615A85001C4C68 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		217B5C0B296334670050BE00 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ChatApp.app; path = "/Users/shimadasusumutarou/Documents/ChatApp/build/Debug-iphoneos/ChatApp.app"; sourceTree = "<absolute>"; };
 		219D903A2961DE2F00EAF5D7 /* addFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFriendView.swift; sourceTree = "<group>"; };
 		219D903C2961F88000EAF5D7 /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 		219D903E2962A86B00EAF5D7 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		219D90402962B40900EAF5D7 /* InputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputView.xib; sourceTree = "<group>"; };
+		21D022222963FA0F009592D9 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D0222329640E81009592D9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8350541C48F66AD4F15261D4 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B5328B52ED805C6F73E96E /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		C2509B64A7D6C2FE6D5DF598 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				215A43A9296009D1001C4C68 /* ChatApp */,
 				DD98E660004B1B583705C19E /* Pods */,
 				C764B3E56C76C8BBF91F5C46 /* Frameworks */,
+				21D022222963FA0F009592D9 /* ChatApp.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +108,7 @@
 				219D903C2961F88000EAF5D7 /* QRScanner.swift */,
 				219D903E2962A86B00EAF5D7 /* ChatView.swift */,
 				219D90402962B40900EAF5D7 /* InputView.xib */,
+				21D0222329640E81009592D9 /* ProfileView.swift */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -123,7 +127,6 @@
 				C2509B64A7D6C2FE6D5DF598 /* Pods-ChatApp.debug.xcconfig */,
 				C1B5328B52ED805C6F73E96E /* Pods-ChatApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,7 +158,7 @@
 				215A43CD29601955001C4C68 /* FirebaseStorageCombine-Community */,
 			);
 			productName = ChatApp;
-			productReference = 217B5C0B296334670050BE00 /* ChatApp.app */;
+			productReference = 21D022222963FA0F009592D9 /* ChatApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -260,6 +263,7 @@
 				215A43D829615A85001C4C68 /* CustomView.swift in Sources */,
 				215A43AF296009D1001C4C68 /* ViewController.swift in Sources */,
 				215A43D029601C4C001C4C68 /* AuthHelper.swift in Sources */,
+				21D0222429640E81009592D9 /* ProfileView.swift in Sources */,
 				219D903F2962A86B00EAF5D7 /* ChatView.swift in Sources */,
 				215A43D629614C8F001C4C68 /* DatabaseHelper.swift in Sources */,
 				219D903B2961DE2F00EAF5D7 /* addFriendView.swift in Sources */,

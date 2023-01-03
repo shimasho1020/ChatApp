@@ -13,14 +13,19 @@ class addFriendView: UIViewController {
     @IBOutlet weak var qrView: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var idFeild: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
     
     let uid = AuthHelper().uid()
     let database = DatabaseHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        idLabel.text = "MyID: \(uid)"
+        idLabel.text = uid
         qrView.image = makeQRCode(text: uid)
+        database.getUserName(userID: uid, result: {
+            name in
+            self.nameLabel.text = name
+        })
 
     }
     

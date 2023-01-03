@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class InsetLabel: UILabel {
-    var contentInsets = UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
+    var contentInsets = UIEdgeInsets.init(top: 10, left: 12, bottom: 10, right: 12)
     
     override func drawText(in rect: CGRect) {
         let insetRect = rect.inset(by: contentInsets)

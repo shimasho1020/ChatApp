@@ -77,7 +77,7 @@ class DatabaseHelper {
 
     func getImage(userID:String,imageView:UIImageView){
 //        let reference = storage.child("image/"+userID+".jpeg") as! URL
-        let imageRef = Storage.storage().reference(withPath: "image/"+userID+".jpeg")
+        let imageRef = storage.child("image/"+userID+".jpeg")
         imageRef.downloadURL { url, error in
                 if let url = url {
                     imageView.sd_setImage(with: url)
