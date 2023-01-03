@@ -71,6 +71,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             let data = sender as! ChatRoom
             VC.roomData = data
         }
+        if segue.identifier == "login" {
+            // 遷移先のViewControllerを取得
+            let VC = segue.destination as! LoginView
+            // 遷移先のプロパティに処理ごと渡す
+            VC.resultHandler = { text in
+                // 引数を使ってoutputLabelの値を更新する処理
+                self.viewDidLoad()
+            }
+        }
     }
     
 }

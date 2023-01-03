@@ -62,7 +62,7 @@ class DatabaseHelper {
             (doc, error) in
             if error == nil {
                 let data = doc?.data()
-                guard let name = data!["name"] as! String? else { return }
+                guard let name = data?["name"] as! String? else { return }
                 result(name)
             }
         })

@@ -11,6 +11,10 @@ class LoginView: UIViewController {
 
     @IBOutlet weak var emailFeild: UITextField!
     @IBOutlet weak var passwordFeild: UITextField!
+    
+    // 遷移元から処理を受け取るクロージャのプロパティを用意
+        var resultHandler: ((String) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,8 +30,12 @@ class LoginView: UIViewController {
         AuthHelper().login(email: emailFeild.text!, password: passwordFeild.text!, result: {
             success in
             if success {
-                self.dismiss(animated: true, completion: nil)
                 print("ログイン成功")
+                if let handler = self.resultHandler {
+                    // 入力値を引数として渡された処理の実行
+                    handler("")
+                }
+                self.dismiss(animated: true, completion: nil)
             } else {
                 self.showError()
             }
