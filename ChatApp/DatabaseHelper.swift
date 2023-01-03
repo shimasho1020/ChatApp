@@ -11,7 +11,6 @@ import Firebase
 import FirebaseFirestore
 import FirebaseStorage
 //import FirebaseStorageUI
-import SDWebImage
 
 class DatabaseHelper {
     
@@ -78,11 +77,11 @@ class DatabaseHelper {
     func getImage(userID:String,imageView:UIImageView){
 //        let reference = storage.child("image/"+userID+".jpeg") as! URL
         let imageRef = storage.child("image/"+userID+".jpeg")
-        imageRef.downloadURL { url, error in
-                if let url = url {
-                    imageView.sd_setImage(with: url)
-                }
-            }
+//        imageRef.downloadURL { url, error in
+//                if let url = url {
+//                    imageView.sd_setImage(with: url)
+//                }
+//            }
     }
     
     func createRoom(userID:String){
