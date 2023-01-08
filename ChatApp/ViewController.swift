@@ -12,6 +12,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     var dataHelper:DatabaseHelper!
     var roomList:[ChatRoom] = []
+    var selfImageData:Data!
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,6 +30,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 self.tableView.reloadData()
             })
         }
+        dataHelper.getImageData(userID: uid, result: {
+            result in
+            guard let data = result else{return}
+            self.selfImageData = data
+        })
     }
     
     @IBAction func onLogOut(_ sender: Any) {
@@ -79,6 +85,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 // 引数を使ってoutputLabelの値を更新する処理
                 self.viewDidLoad()
             }
+        }
+        if segue.identifier == "profile" {
+            guard let data = selfImageData else{return}
+            let VC = segue.destination as! ProfileView
+            VC.selfImageData = data
         }
     }
     

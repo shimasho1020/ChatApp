@@ -227,7 +227,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-1U-Jor">
-                                <rect key="frame" x="146" y="623" width="120" height="60"/>
+                                <rect key="frame" x="136.66666666666666" y="623" width="119.99999999999997" height="60"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="s7z-Fh-moI"/>
@@ -241,7 +241,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnM-qs-eNu">
-                                <rect key="frame" x="116" y="715" width="180" height="35"/>
+                                <rect key="frame" x="106.66666666666669" y="715" width="180" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="ログイン画面に戻る"/>
                                 <connections>
@@ -369,7 +369,7 @@
                             </barButtonItem>
                             <barButtonItem image="person.fill" catalog="system" id="0he-nD-pMJ">
                                 <connections>
-                                    <segue destination="ZxM-uT-6sc" kind="presentation" id="6aY-zu-qyA"/>
+                                    <segue destination="ZxM-uT-6sc" kind="presentation" identifier="profile" id="6aY-zu-qyA"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="person.fill" catalog="system" id="sVX-iQ-vNr">

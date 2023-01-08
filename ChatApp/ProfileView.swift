@@ -14,6 +14,7 @@ class ProfileView: UIViewController,UIImagePickerControllerDelegate, UINavigatio
     
     let uid = AuthHelper().uid()
     let database = DatabaseHelper()
+    var selfImageData:Data!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +23,15 @@ class ProfileView: UIViewController,UIImagePickerControllerDelegate, UINavigatio
             name in
             self.nameField.text = name
         })
-        imageView.layer.cornerRadius = imageView.frame.size.width * 0.5
-        imageView.clipsToBounds = true
-        database.getImage(userID: uid, imageView: imageView)
-        
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onImage)))
+        
+        imageView.layer.cornerRadius = imageView.frame.size.width * 0.5
+        imageView.clipsToBounds = true
+        guard let data = selfImageData else{return}
+        let image = UIImage(data: data)
+        imageView.image = image
     }
     
     @objc func onImage(){
