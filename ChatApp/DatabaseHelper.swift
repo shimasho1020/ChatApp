@@ -94,17 +94,12 @@ class DatabaseHelper {
     }
     
     func getImageData(userID:String, result:@escaping(Data?) -> Void){
-        print(userID)
-        var imageData:Data!
         let imageRef = storage.child("image/"+userID+".jpeg")
         imageRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
             if let error = error {
                 print(error)
-            } else {
-                imageData = data!
             }
-            print(imageData ?? "値がありません")
-            result(imageData)
+            result(data)
         }
     }
     
