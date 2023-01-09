@@ -13,6 +13,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var dataHelper:DatabaseHelper!
     var roomList:[ChatRoom] = []
     var selfImageData:Data!
+    var imageDataList:[Data] = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -58,6 +59,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         imageView.layer.cornerRadius = imageView.frame.size.width * 0.5
         imageView.clipsToBounds = true
         dataHelper.getImage(userID: cellData.userID, imageView: imageView)
+        dataHelper.getImageData(userID: cellData.userID, result:{result in
+            guard let data = result else{return}
+            self.imageDataList.append(data)
+        })
         let nameLabel = cell?.viewWithTag(2) as! UILabel
         dataHelper.getUserName(userID: cellData.userID, result: {
             name in
@@ -68,14 +73,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "chat", sender: roomList[indexPath.row])
+        performSegue(withIdentifier: "chat", sender:(roomList[indexPath.row], imageDataList[indexPath.row]))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "chat" {
             let VC = segue.destination as! ChatView
-            let data = sender as! ChatRoom
-            VC.roomData = data
+            let data = sender as! (ChatRoom, Data)
+            VC.roomData = data.0
+            VC.partnerImageData = data.1
+            VC.selfImageData = selfImageData
+
         }
         if segue.identifier == "login" {
             // 遷移先のViewControllerを取得
