@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import Dispatch
+let mainQ = DispatchQueue.main
+let globalQ = DispatchQueue.global(qos: .userInitiated)
 
 class ChatView: UIViewController,UITableViewDelegate,UITableViewDataSource, InputViewDelegate {
     
@@ -95,9 +97,11 @@ class ChatView: UIViewController,UITableViewDelegate,UITableViewDataSource, Inpu
         let imageView = cell.viewWithTag(2) as! UIImageView
         imageView.layer.cornerRadius = imageView.frame.height * 0.5
         imageView.clipsToBounds = true
-//        database.getImage(userID: data.userID, imageView: imageView)
+        
         let image = data.userID==AuthHelper().uid() ? UIImage(data:selfImageData!) : UIImage(data:partnerImageData!)
-        imageView.image = image
+        mainQ.async {
+            imageView.image = image
+        }
         
         let label = cell.viewWithTag(1) as! UILabel
         label.text = data.text

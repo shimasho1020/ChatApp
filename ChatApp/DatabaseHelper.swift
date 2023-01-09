@@ -93,10 +93,6 @@ class DatabaseHelper {
 //            }
     }
     
-//    func setImage(data:Data,imageView:UIImageView){
-//        DispatchQueue.async(<#T##self: DispatchQueue##DispatchQueue#>)
-//    }
-    
     func getImageData(userID:String, result:@escaping(Data?) -> Void){
         let imageRef = storage.child("image/"+userID+".jpeg")
         imageRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
