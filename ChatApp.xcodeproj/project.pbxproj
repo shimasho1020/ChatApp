@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213A0E12296BB4F700D47110 /* ArrayExtentionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A0E11296BB4F700D47110 /* ArrayExtentionFile.swift */; };
 		215A43AB296009D1001C4C68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A43AA296009D1001C4C68 /* AppDelegate.swift */; };
 		215A43AD296009D1001C4C68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A43AC296009D1001C4C68 /* SceneDelegate.swift */; };
 		215A43AF296009D1001C4C68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A43AE296009D1001C4C68 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		213A0E11296BB4F700D47110 /* ArrayExtentionFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtentionFile.swift; sourceTree = "<group>"; };
 		215A43AA296009D1001C4C68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		215A43AC296009D1001C4C68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		215A43AE296009D1001C4C68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				219D903E2962A86B00EAF5D7 /* ChatView.swift */,
 				219D90402962B40900EAF5D7 /* InputView.xib */,
 				21D0222329640E81009592D9 /* ProfileView.swift */,
+				213A0E11296BB4F700D47110 /* ArrayExtentionFile.swift */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				215A43D629614C8F001C4C68 /* DatabaseHelper.swift in Sources */,
 				219D903B2961DE2F00EAF5D7 /* addFriendView.swift in Sources */,
 				215A43AB296009D1001C4C68 /* AppDelegate.swift in Sources */,
+				213A0E12296BB4F700D47110 /* ArrayExtentionFile.swift in Sources */,
 				215A43D229603291001C4C68 /* CreatAccountView.swift in Sources */,
 				215A43AD296009D1001C4C68 /* SceneDelegate.swift in Sources */,
 				219D903D2961F88000EAF5D7 /* QRScanner.swift in Sources */,

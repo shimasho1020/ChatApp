@@ -13,7 +13,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var dataHelper:DatabaseHelper!
     var roomList:[ChatRoom] = []
     var selfImageData:Data!
-    var imageDataList:[Data] = []
+    var imageDataList = [Any](repeating: "", count: 20)
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -61,7 +61,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         dataHelper.getImage(userID: cellData.userID, imageView: imageView)
         dataHelper.getImageData(userID: cellData.userID, result:{result in
             guard let data = result else{return}
-            self.imageDataList.append(data)
+            self.imageDataList[indexPath.row] = data
         })
         let nameLabel = cell?.viewWithTag(2) as! UILabel
         dataHelper.getUserName(userID: cellData.userID, result: {
