@@ -15,6 +15,7 @@ class ProfileView: UIViewController,UIImagePickerControllerDelegate, UINavigatio
     let uid = AuthHelper().uid()
     let database = DatabaseHelper()
     var selfImageData:Data!
+    var resultHandler: ((Data) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +58,11 @@ class ProfileView: UIViewController,UIImagePickerControllerDelegate, UINavigatio
             showError(message: "名前は3字以上10字以内で設定してください。")
             return
         }
-        DatabaseHelper().resisterUserInfo(name: nameField.text!, image: imageView.image!)
+        DatabaseHelper().resisterUserInfo(name: nameField.text!, image: imageView.image!, result: {result in
+            if let handler = self.resultHandler {
+                handler(result)
+            }
+        })
         self.dismiss(animated: true, completion: nil)
         
     }

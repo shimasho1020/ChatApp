@@ -68,11 +68,12 @@ class DatabaseHelper {
         })
     }
 
-    func resisterUserInfo(name:String,image:UIImage){
+    func resisterUserInfo(name:String,image:UIImage,result:@escaping(Data) -> Void){
         db.collection("user").document(uid).setData(["name":name])
         let resized = image.resize(toWidth: 300)
         guard let imageData = resized!.jpegData(compressionQuality:1) else { return }
         storage.child("image/\(uid).jpeg").putData(imageData, metadata: nil)
+        result(imageData)
     }
 
     func getImage(userID:String,imageView:UIImageView){

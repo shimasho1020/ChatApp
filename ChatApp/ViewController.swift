@@ -98,6 +98,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             guard let data = selfImageData else{return}
             let VC = segue.destination as! ProfileView
             VC.selfImageData = data
+            VC.resultHandler = { data in
+                // 引数を使ってoutputLabelの値を更新する処理
+                self.selfImageData = data as Data
+            }
         }
     }
     
