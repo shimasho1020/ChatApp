@@ -23,6 +23,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         print("USER_ID: "+uid)
         if uid == "" {
             performSegue(withIdentifier: "login", sender: nil)
+            return
         } else {
             dataHelper = DatabaseHelper()
             dataHelper.getMyRoomList(result: {
